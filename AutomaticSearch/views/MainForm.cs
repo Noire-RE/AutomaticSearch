@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using WebpageTracking.Controllers;
 
@@ -56,8 +50,18 @@ namespace AutomaticSearch
             checkButton.Enabled = true; 
         }
 
+        private void okButton_Click(object sender, EventArgs e)
+        {
+            int daysInterval = (int)dayNumericP1.Value; 
+            string startTime = stTextBoxP1.Text; 
+            int repeatHours = (int)repNumericP1.Value;
+            TaskSchedulerHelper.CreateTask(daysInterval, startTime, repeatHours);
+        }
 
-
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            TaskSchedulerHelper.DeleteTask();
+        }
 
 
     }

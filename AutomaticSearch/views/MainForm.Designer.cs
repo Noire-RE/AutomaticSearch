@@ -160,27 +160,27 @@
             // okButton
             // 
             this.okButton.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.okButton.Image = global::AutomaticSearch.Properties.Resources.check_alt;
             this.okButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.okButton.Location = new System.Drawing.Point(332, 76);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(117, 50);
             this.okButton.TabIndex = 58;
-            this.okButton.Text = "確定";
+            this.okButton.Text = "排程開始";
             this.okButton.UseVisualStyleBackColor = true;
+            this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
             // exitButton
             // 
             this.exitButton.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.exitButton.Image = global::AutomaticSearch.Properties.Resources.Exit32;
             this.exitButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.exitButton.Location = new System.Drawing.Point(332, 139);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(117, 50);
             this.exitButton.TabIndex = 57;
             this.exitButton.TabStop = false;
-            this.exitButton.Text = "取消";
+            this.exitButton.Text = "排程取消";
             this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // label14
             // 
@@ -225,7 +225,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "MainForm";
             this.Text = "自動排程查詢健保網頁";
             this.Load += new System.EventHandler(this.MainForm_Load);
